@@ -1,13 +1,19 @@
 // Generate random password
+//
+// Step 1
+// Add 'use strict';
+// Improve naming
 
-let GeneratePassword = (alphabet, length) => {
+'use strict';
+
+let generatePassword = (alphabet, length) => {
   const MAX = alphabet.length;
-  key = '';
+  password = '';
   for (let i = 0; i < length; i++) {
-    Index = Math.floor(Math.random() * MAX);
-    key = key + alphabet[Index];
+    index = Math.floor(Math.random() * MAX);
+    password = password + alphabet[index];
   }
-  return key;
+  return password;
 };
 
-module.exports = GeneratePassword;
+module.exports = generatePassword;
