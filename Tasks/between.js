@@ -1,27 +1,24 @@
 // Extract substring between prefix and suffix
 //
-// Step 1
-// Add 'use strict';
-// Fix formatting
-// Use camel case
+// Step 2
+// Add `const` and `let`
+// Improve naming
+// Remove unneeded blocks, for example we do not need else here
 
 'use strict';
 
-getValueBetween = (str, p, s) => {
-  i = str.indexOf(p);
-  if (i === -1) return '';
-  else {
-    k = i + p.length;
-    str = str.substring(k);
-    if (s) {
-      i = str.indexOf(s);
-      if (i === -1) return '';
-      else {
-        str = str.substring(0, i);
-      }
-    }
+const getValueBetween = (string, prefix, suffix) => {
+  let index = string.indexOf(prefix);
+  if (index === -1) return '';
+  const substringIndex = index + prefix.length;
+  string = string.substring(substringIndex);
+  if (suffix) {
+    index = string.indexOf(suffix);
+    if (index === -1) return '';
+    string = string.substring(0, index);
   }
-  return str;
+  return string;
 };
 
 module.exports = getValueBetween;
+
