@@ -1,15 +1,20 @@
 // Get day number
+//
+// Step 1
+// Add 'use strict';
+// Fix formatting
+// Improve naming
 
-let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+'use strict';
 
-_parse_day_ = (s) => {
+let daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+parseDay = (string) => {
   let i;
-  for (i = 0; i < D.length; i++) {
-    if (s.startsWith(D[i].toLowerCase())) {
-      return i + 1;
-    }
+  for (i = 0; i < daysOfWeek.length; i++) {
+    if (string.startsWith(daysOfWeek[i].toLowerCase())) return i + 1;
   }
   return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = parseDay;
