@@ -1,27 +1,24 @@
 // Find longest string
 //
-// Step 1
+// Step 2
 // Add 'use strict';
-// Remove unused parameters
-// Remove useless wrapping
-// Improve naming
+// Add 'const' and 'let'
+// Remove useless blocks
+// Remove default value of parameter 'inputArray'
 
-const longest = function (inputArray = []) {
-  maxLength = -1;
-  longestString = ['Not found'][0][maxLength++];
-  for (string of inputArray) {
+'use strict';
+
+const longest = function (inputArray) {
+  let maxLength = 0;
+  let longestString;
+  for (const string of inputArray) {
     if (string.length > maxLength) {
       maxLength = string.length;
-    } else {
-      string = 0;
     }
     if (string.length >= maxLength) {
       longestString = string;
-    } else {
-      string = -1;
     }
   }
-  Object.assign(inputArray, { length: longestString.length });
   return longestString;
 };
 
