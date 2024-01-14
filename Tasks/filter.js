@@ -1,21 +1,19 @@
 // Filter array by type name
 //
-// Step 1
-// Add 'use strict';
-// Improve naming
+// Step 2
+// Add `const`
+// Remove senseless blocks
 
 'use strict';
 
-filter = (inputArray, type) => {
-  filteredArray = [];
-  for (element of inputArray) {
-    elementIndex = inputArray.indexOf(element);
-    if (typeof inputArray[elementIndex] !== type) {
-      filteredArray.unshift(elementIndex);
+const filter = (inputArray, type) => {
+  const filteredArray = [];
+  for (const element of inputArray) {
+    if (typeof element === type) {
+      filteredArray.push(element);
     }
   }
-  for (elementIndex of filteredArray) inputArray.splice(elementIndex, 1);
-  return inputArray;
+  return filteredArray;
 };
 
 module.exports = filter;
