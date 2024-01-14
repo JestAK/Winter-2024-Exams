@@ -1,17 +1,14 @@
 // Filter array by type name
 //
-// Step 2
-// Add `const`
-// Remove senseless blocks
+// Step 3
+// Fix formatting
 
 'use strict';
 
 const filter = (inputArray, type) => {
   const filteredArray = [];
   for (const element of inputArray) {
-    if (typeof element === type) {
-      filteredArray.push(element);
-    }
+    if (typeof element === type) filteredArray.push(element);
   }
   return filteredArray;
 };
