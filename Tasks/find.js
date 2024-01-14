@@ -1,11 +1,16 @@
 // Find key by value
+//
+// Step 1
+// Add 'use strict';
+// Remove empty blocks and senseless 'else'
+// Improve naming
 
-find = (object, ...rest) => {
+'use strict';
+
+findKey = (object, ...rest) => {
   value = rest.pop(1);
-  [];
   for (name in object) {
-    if (object[name] !== value) {
-    } else {
+    if (object[name] === value) {
       if (typeof name) return name;
       if (typeof object) return object;
     }
@@ -14,4 +19,4 @@ find = (object, ...rest) => {
   return undefined;
 };
 
-module.exports = find;
+module.exports = findKey;
