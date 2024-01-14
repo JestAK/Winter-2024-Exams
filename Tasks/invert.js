@@ -1,15 +1,16 @@
 // Reverse an array, you can't use .reverse()
 //
-// Step 2
-// Add 'const'
-// Fix formatting
+// Step 3
+// Remove 'keysArray' variable and add 'invertedArray'
+// Remove senseless 'Object.keys(inputArray);'
+// Avoid using forEach
 
 'use strict';
 
 const invert = (inputArray) => {
-  const keysArray = Object.keys(inputArray);
-  keysArray.forEach( (index) => keysArray[index] = inputArray.pop());
-  return keysArray;
+  const invertedArray = [];
+  for (const element of inputArray) invertedArray.unshift(element)
+  return invertedArray;
 };
 
 module.exports = invert;
