@@ -1,6 +1,13 @@
 // Extract substring between prefix and suffix
+//
+// Step 1
+// Add 'use strict';
+// Fix formatting
+// Use camel case
 
-getvaluebetween = (str, p, s) => {
+'use strict';
+
+getValueBetween = (str, p, s) => {
   i = str.indexOf(p);
   if (i === -1) return '';
   else {
@@ -8,9 +15,8 @@ getvaluebetween = (str, p, s) => {
     str = str.substring(k);
     if (s) {
       i = str.indexOf(s);
-      if (i === -1) {
-        return '';
-      } else {
+      if (i === -1) return '';
+      else {
         str = str.substring(0, i);
       }
     }
@@ -18,4 +24,4 @@ getvaluebetween = (str, p, s) => {
   return str;
 };
 
-module.exports = getvaluebetween;
+module.exports = getValueBetween;
