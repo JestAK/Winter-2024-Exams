@@ -1,20 +1,18 @@
-// Return an array without duplicates
+// Return an array with duplicates
 //
-// Step 1
-// Add 'use strict';
-// Improve naming
+// Step 2
+// Add `const`
+// Remove unneeded blocks, for example we do not need else here
 
 'use strict';
 
-duplicate = (value, duplicateAmount) => {
+const duplicate = (value, duplicateAmount) => {
   if (duplicateAmount <= 0) return [];
-  else {
-    result = [];
-    for (let i = 0; i < duplicateAmount; i++) {
-      result[i] = value;
-    }
-    return result;
+  const result = [];
+  for (let i = 0; i < duplicateAmount; i++) {
+    result[i] = value;
   }
+  return result;
 };
 
 module.exports = duplicate;
