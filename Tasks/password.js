@@ -1,17 +1,18 @@
 // Generate random password
 //
-// Step 1
-// Add 'use strict';
-// Improve naming
+// Step 2
+// Add 'const' and 'let'
+// Prefer const, minimize let usage
+// Using '+=' instead of duplicate variable name
 
 'use strict';
 
-let generatePassword = (alphabet, length) => {
+const generatePassword = (alphabet, length) => {
   const MAX = alphabet.length;
-  password = '';
+  let password = '';
   for (let i = 0; i < length; i++) {
-    index = Math.floor(Math.random() * MAX);
-    password = password + alphabet[index];
+    const index = Math.floor(Math.random() * MAX);
+    password += alphabet[index];
   }
   return password;
 };
