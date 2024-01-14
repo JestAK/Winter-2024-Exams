@@ -1,6 +1,13 @@
 // Get month number
+//
+// Step 1
+// Add 'use strict';
+// Improve naming
 
-Months = [
+
+'use strict';
+
+months = [
   'jan',
   'feb',
   'mar',
@@ -15,12 +22,12 @@ Months = [
   'dec',
 ];
 
-Month = (s) => {
-  l = Months.length;
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+month = (inputString) => {
+  monthsAmount = months.length;
+  for (let i = 0; i < monthsAmount; i++) {
+    if (inputString.toLowerCase().startsWith(months[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = month;
